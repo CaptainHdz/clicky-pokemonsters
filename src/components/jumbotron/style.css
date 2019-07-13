@@ -1,0 +1,19 @@
+.jumbotron  {
+    background-image: url("https://bit.ly/2JKi6mD");
+    background-size: contain;
+    height: 300px;
+    background-color: white;
+    /* background-repeat: no-repeat; */
+}
+
+.rules {
+    margin-top: 4rem;
+    font-size: 2rem;
+}
+
+.title {
+margin-bottom: 2rem;
+font-size: 5rem;
+}
+
+

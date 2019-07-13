@@ -1,0 +1,13 @@
+.navbar {
+    background-color: rgb(155, 11, 11);
+    width: 100%;
+}
+.navbar-brand {
+    font-size: 2rem;
+}
+.navbar ul {
+    width: 100%;
+}
+.navbar li {
+    display: inline-block;
+}

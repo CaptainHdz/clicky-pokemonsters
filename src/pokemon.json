@@ -1,0 +1,97 @@
+[{
+    "id": 1,
+    "name": "Charizard",
+    "image": "https://assets.pokemon.com/assets/cms2/img/pokedex/full/006.png",
+    "clicked": false
+},
+{
+    "id": 2,
+    "name": "Ampharos",
+    "image": "https://cdn.bulbagarden.net/upload/thumb/4/47/181Ampharos.png/1200px-181Ampharos.png",
+    "clicked": false   
+},
+{
+    "id": 3,
+    "name": "Eevee",
+    "image": "https://assets.pokemon.com/assets/cms2/img/pokedex/full/133.png",
+    "clicked": false
+},
+{
+    "id": 4,
+    "name": "Gyarados",
+    "image": "https://static.pokemonpets.com/images/monsters-images-300-300/130-Gyarados.png",
+    "clicked": false
+},
+{
+    "id": 5,
+    "name": "Ludicolo",
+    "image": "https://assets.pokemon.com/assets/cms2/img/pokedex/full/272.png",
+    "clicked": false
+},
+{
+    "id": 6,
+    "name": "Mewtwo",
+    "image": "https://cdn.bulbagarden.net/upload/thumb/7/78/150Mewtwo.png/250px-150Mewtwo.png",
+    "clicked": false
+},
+{
+    "id": 7,
+    "name": "Mudkip",
+    "image": "https://assets.pokemon.com/assets/cms2/img/pokedex/full/258.png",
+    "clicked": false
+},
+{
+    "id": 8,
+    "name": "Ninetales",
+    "image": "https://img.pokemondb.net/artwork/ninetales-alolan.jpg",
+    "clicked": false
+},
+{
+    "id": 9,
+    "name": "Pikachu",
+    "image": "https://assets.pokemon.com/assets/cms2/img/pokedex/full/025.png",
+    "clicked": false
+},
+{
+    "id": 10,
+    "name": "Snorlax",
+    "image": "https://assets.pokemon.com/assets/cms2/img/pokedex/full/143.png",
+    "clicked": false
+},
+{
+    "id": 11,
+    "name": "Torterra",
+    "image": "https://static.pokemonpets.com/images/monsters-images-300-300/2389-Shiny-Torterra.png",
+    "clicked": false
+},
+{
+    "id": 12,
+    "name": "Tyranitar",
+    "image": "https://cdn.bulbagarden.net/upload/thumb/8/82/248Tyranitar.png/250px-248Tyranitar.png",
+    "clicked": false
+},
+{
+    "id": 13,
+    "name": "Trubbish",
+    "image": "https://cdn.bulbagarden.net/upload/thumb/e/e2/568Trubbish.png/1200px-568Trubbish.png",
+    "clicked": false
+},
+{
+    "id": 14,
+    "name": "Goodra",
+    "image": "https://vignette.wikia.nocookie.net/pokemon/images/d/df/706Goodra.png/revision/latest?cb=20140329060029",
+    "clicked": false
+},
+{
+    "id": 15,
+    "name": "Wailord",
+    "image": "https://assets.pokemon.com/assets/cms2/img/pokedex/full/321.png",
+    "clicked": false
+},
+{
+    "id": 16,
+    "name": "Houndoom",
+    "image": "https://cdn.bulbagarden.net/upload/thumb/5/51/229Houndoom.png/250px-229Houndoom.png",
+    "clicked": false
+}
+]
