@@ -2,7 +2,7 @@
   "name": "clicky-pokemonsters",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://captainhdz.github.io/clicky-pokememory/",
+  "homepage": "https://captainhdz.github.io/clicky-pokemonsters/",
   "dependencies": {
     "react": "^16.8.6",
     "react-dom": "^16.8.6",
