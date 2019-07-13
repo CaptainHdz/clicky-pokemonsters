@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/clicky-pokememory/static/css/main.357549d0.chunk.css",
-    "main.js": "/clicky-pokememory/static/js/main.5b9511ff.chunk.js",
-    "main.js.map": "/clicky-pokememory/static/js/main.5b9511ff.chunk.js.map",
-    "runtime~main.js": "/clicky-pokememory/static/js/runtime~main.c2d120f2.js",
-    "runtime~main.js.map": "/clicky-pokememory/static/js/runtime~main.c2d120f2.js.map",
-    "static/js/2.6efc73d3.chunk.js": "/clicky-pokememory/static/js/2.6efc73d3.chunk.js",
-    "static/js/2.6efc73d3.chunk.js.map": "/clicky-pokememory/static/js/2.6efc73d3.chunk.js.map",
-    "index.html": "/clicky-pokememory/index.html",
-    "precache-manifest.06694cc257f1657c5c750b370bf831a0.js": "/clicky-pokememory/precache-manifest.06694cc257f1657c5c750b370bf831a0.js",
-    "service-worker.js": "/clicky-pokememory/service-worker.js",
-    "static/css/main.357549d0.chunk.css.map": "/clicky-pokememory/static/css/main.357549d0.chunk.css.map"
+    "main.css": "/clicky-pokemonsters/static/css/main.357549d0.chunk.css",
+    "main.js": "/clicky-pokemonsters/static/js/main.5b9511ff.chunk.js",
+    "main.js.map": "/clicky-pokemonsters/static/js/main.5b9511ff.chunk.js.map",
+    "runtime~main.js": "/clicky-pokemonsters/static/js/runtime~main.e0e6cdb0.js",
+    "runtime~main.js.map": "/clicky-pokemonsters/static/js/runtime~main.e0e6cdb0.js.map",
+    "static/js/2.6efc73d3.chunk.js": "/clicky-pokemonsters/static/js/2.6efc73d3.chunk.js",
+    "static/js/2.6efc73d3.chunk.js.map": "/clicky-pokemonsters/static/js/2.6efc73d3.chunk.js.map",
+    "index.html": "/clicky-pokemonsters/index.html",
+    "precache-manifest.d4dc9cfd48a18b7b65f880c434883166.js": "/clicky-pokemonsters/precache-manifest.d4dc9cfd48a18b7b65f880c434883166.js",
+    "service-worker.js": "/clicky-pokemonsters/service-worker.js",
+    "static/css/main.357549d0.chunk.css.map": "/clicky-pokemonsters/static/css/main.357549d0.chunk.css.map"
   }
 }
