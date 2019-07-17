@@ -23,7 +23,11 @@ class App extends Component {
   // on clicking a false card, set the card to true and shuffle the array of pokemon, and add 1 to the score
   // on clicking a true card, set all cards to false, shuffle the array, and set the score to 0
  //-----------------------//
-    
+    cardIsTrue = () => {
+
+    };
+
+    cardIsFalse = () => {};
   
   
 
