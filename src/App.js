@@ -16,7 +16,8 @@ class App extends Component {
   };
 // A function that will make the selected cards clicked property true
   turnTrue = id => {
-
+    console.log("WTF")
+console.log(id)
   };
 // ------My thoughts-------//
 // if the score is greater than the topScore, then make the topScore equal to the score
@@ -40,10 +41,11 @@ class App extends Component {
           <Row>
           {this.state.Pokemon.map(monster => (
             <Card 
-                  turnClickedTrue={this.turnTrue}
+                  turnTrue={this.turnTrue}
                   key={monster.id} 
                   image={monster.image}     
                   name={monster.name}
+                  clicked={monster.clicked}
                   id={monster.id}
                   />
           ))}
