@@ -16,8 +16,13 @@ class App extends Component {
   };
 // A function that will make the selected cards clicked property true
   turnTrue = id => {
-    console.log("WTF")
 console.log(id)
+let score = this.state.Score;
+let addScore = score + 1;
+console.log(this.state.Score)
+this.setState({Pokemon,
+Score: addScore ,
+...this.state.topScore})
   };
 // ------My thoughts-------//
 // if the score is greater than the topScore, then make the topScore equal to the score
@@ -35,7 +40,8 @@ console.log(id)
   render() {
     return (
       <div>
-        <Navbar />
+        <Navbar
+        score={this.state.Score} />
         <Jumbotron />
         <Wrapper>
           <Row>
