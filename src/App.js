@@ -14,27 +14,44 @@ class App extends Component {
     Score: 0,
     topScore: 0
   };
+
+
 // A function that will make the selected cards clicked property true
-  turnTrue = id => {
-console.log(id)
-let score = this.state.Score;
-let addScore = score + 1;
-console.log(this.state.Score)
-this.setState({Pokemon,
-Score: addScore ,
-...this.state.topScore})
-  };
+  turnTrue = clicked => {
+if (clicked === false) {
+   clicked = true;
+  this.cardIsFalse()
+}
+else if (clicked === true) {this.cardIsTrue()}
+};
 // ------My thoughts-------//
-// if the score is greater than the topScore, then make the topScore equal to the score
-  // on clicking a false card, set the card to true and shuffle the array of pokemon, and add 1 to the score
-  // on clicking a true card, set all cards to false, shuffle the array, and set the score to 0
+//When any card is clicked, check if it is false, if clicked is false, turn it true add to the score and randomly order the cards.
+//if clicked is true when the card is clicked, then reset the score, set all cards to false, and reorder them.
  //-----------------------//
     cardIsTrue = () => {
+      
 
     };
 
-    cardIsFalse = () => {};
-  
+    cardIsFalse = () => {
+      let score = this.state.Score;
+let addScore = score + 1;
+this.setState({Pokemon,
+Score: addScore ,
+...this.state.topScore});
+this.shuffle(Pokemon)
+    };
+
+  //This will shuffle the cards/pokemon. Credits to Fisher Yates algorithm 
+  shuffle = (array) => {
+    let i = array.length, j, temporary;
+    while(i-- > 0) {
+      j = Math.floor(Math.random() * (i));
+      temporary = array[j];
+      array[j] = array[i]
+      array[i] = temporary
+    }
+  };
   
 
   render() {
