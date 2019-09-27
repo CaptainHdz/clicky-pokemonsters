@@ -87,11 +87,5 @@
     "name": "Wailord",
     "image": "https://assets.pokemon.com/assets/cms2/img/pokedex/full/321.png",
     "clicked": "false"
-},
-{
-    "id": 16,
-    "name": "Houndoom",
-    "image": "https://cdn.bulbagarden.net/upload/thumb/5/51/229Houndoom.png/250px-229Houndoom.png",
-    "clicked": "false"
 }
 ]

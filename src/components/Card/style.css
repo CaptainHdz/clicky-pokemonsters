@@ -1,4 +1,9 @@
-.img-thumbnail {
-    width: 33%;
-    height: 200px;
+img.img-thumbnail {
+    width: 20px;
+    height: auto;
+}
+
+.img-thumbnail:hover {
+    transform: scale(1.1);
+    transition: 0.1s;
 }
