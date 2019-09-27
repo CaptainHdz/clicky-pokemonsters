@@ -7,6 +7,7 @@ import Row from './components/Row/row';
 import Card from './components/Card/card';
 import Wrapper from './components/Wrapper/wrapper';
 import Pokemon from './pokemon.json';
+// import { all } from 'q';
 
 class App extends Component {
   state = {
@@ -17,28 +18,51 @@ class App extends Component {
 
 
 // A function that will make the selected cards clicked property true
-  turnTrue = clicked => {
-if (clicked === false) {
-   clicked = true;
-  this.cardIsFalse()
+  turnTrue = id => {
+    const card = document.getElementById(`${id}`);
+    const cardStatus = card.getAttribute("status");
+
+if ( cardStatus === "false") {
+   card.setAttribute("status", "true");
+  this.cardIsFalse();
 }
-else if (clicked === true) {this.cardIsTrue()}
+else if (cardStatus === "true") {
+  alert("You already clicked that card! Take this L! Try Again!");
+      const allCardsArr = document.getElementsByClassName("pokemon");
+      for (let i = 0; i < allCardsArr.length; i++) {
+        allCardsArr[i].setAttribute("status", "false")
+      }
+      console.log("Made it this far!!!!")
+  this.cardIsTrue();
+}
 };
 // ------My thoughts-------//
 //When any card is clicked, check if it is false, if clicked is false, turn it true add to the score and randomly order the cards.
 //if clicked is true when the card is clicked, then reset the score, set all cards to false, and reorder them.
  //-----------------------//
     cardIsTrue = () => {
-      
+      this.shuffle(Pokemon);
+      this.setState({
+        Pokemon,
+        Score: 0,
+        ...this.state.topScore
+      })
 
     };
 
     cardIsFalse = () => {
       let score = this.state.Score;
 let addScore = score + 1;
+if (addScore > this.state.topScore) {this.setState({
+  Pokemon,
+  ...this.state.Score,
+  topScore: addScore
+
+})}
 this.setState({Pokemon,
 Score: addScore ,
 ...this.state.topScore});
+
 this.shuffle(Pokemon)
     };
 
@@ -58,7 +82,8 @@ this.shuffle(Pokemon)
     return (
       <div>
         <Navbar
-        score={this.state.Score} />
+        score={this.state.Score}
+        topScore={this.state.topScore} />
         <Jumbotron />
         <Wrapper>
           <Row>
