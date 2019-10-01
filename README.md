@@ -1,6 +1,9 @@
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-Live Link: https://captainhdz.github.io/clicky-pokemonsters/
+## Summary
+A simple but fun game where the user must click on a set of cards. They must click on all the cards without clicking one twice. If the user clicks on a card twice in the same round, their score will reset. The app will display their highest score in that playing session.
+
+**Live Link:** https://captainhdz.github.io/clicky-pokemonsters/
 
 ## Available Scripts
 
