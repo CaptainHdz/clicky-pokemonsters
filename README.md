@@ -3,6 +3,9 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 ## Summary
 A simple but fun game where the user must click on a set of cards. They must click on all the cards without clicking one twice. If the user clicks on a card twice in the same round, their score will reset. The app will display their highest score in that playing session.
 
+## Technologies 
+-React.js
+
 **Live Link:** https://captainhdz.github.io/clicky-pokemonsters/
 
 ## Available Scripts
