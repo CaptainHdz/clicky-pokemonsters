@@ -19,6 +19,7 @@ class App extends Component {
 
 // A function that will make the selected cards clicked property true
   turnTrue = id => {
+    console.log(id)
     const card = document.getElementById(`${id}`);
     const cardStatus = card.getAttribute("status");
 
