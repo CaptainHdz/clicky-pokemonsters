@@ -19,64 +19,59 @@ class App extends Component {
 
 // A function that will make the selected cards clicked property true
   turnTrue = id => {
-    console.log(id)
+	console.log(id)
     const card = document.getElementById(`${id}`);
     const cardStatus = card.getAttribute("status");
 
-if ( cardStatus === "false") {
-   card.setAttribute("status", "true");
-  this.cardIsFalse();
-}
-else if (cardStatus === "true") {
-  alert("You already clicked that card! Take this L! Try Again!");
-      const allCardsArr = document.getElementsByClassName("pokemon");
-      for (let i = 0; i < allCardsArr.length; i++) {
-        allCardsArr[i].setAttribute("status", "false")
-      }
-      console.log("Made it this far!!!!")
-  this.cardIsTrue();
-}
+    if ( cardStatus === "false") {
+    	card.setAttribute("status", "true");
+  		this.cardIsFalse();
+    }
+	else if (cardStatus === "true") {
+  		alert("You already clicked that card! Take this L! Try Again!");
+    	const allCardsArr = document.getElementsByClassName("pokemon");
+    	for (let i = 0; i < allCardsArr.length; i++) {
+    		allCardsArr[i].setAttribute("status", "false")
+    	};
+  		this.cardIsTrue()
+	}
 };
 // ------My thoughts-------//
 //When any card is clicked, check if it is false, if clicked is false, turn it true add to the score and randomly order the cards.
 //if clicked is true when the card is clicked, then reset the score, set all cards to false, and reorder them.
  //-----------------------//
     cardIsTrue = () => {
-      this.shuffle(Pokemon);
-      this.setState({
-        Pokemon,
+    	this.shuffle(Pokemon);
+      	this.setState({
         Score: 0,
-        ...this.state.topScore
-      })
-
+      	});
     };
 
     cardIsFalse = () => {
-      let score = this.state.Score;
-let addScore = score + 1;
-if (addScore > this.state.topScore) {this.setState({
-  Pokemon,
-  ...this.state.Score,
-  topScore: addScore
+		let newScore = this.state.Score + 1;
+		this.setState({
+			Score: newScore
+		});
+		if (newScore > this.state.topScore) { this.setState({topScore: newScore}) }
+		// this.shuffle(Pokemon);
 
-})}
-this.setState({Pokemon,
-Score: addScore ,
-...this.state.topScore});
+		if (newScore === 15) {this.winGame()}
+	};
 
-this.shuffle(Pokemon)
-    };
-
-  //This will shuffle the cards/pokemon. Credits to Fisher Yates algorithm 
-  shuffle = (array) => {
-    let i = array.length, j, temporary;
-    while(i-- > 0) {
-      j = Math.floor(Math.random() * (i));
-      temporary = array[j];
-      array[j] = array[i]
-      array[i] = temporary
-    }
-  };
+	winGame = () => {
+		console.log('YOU WIN MF!');
+	};
+	
+  	//This will shuffle the cards/pokemon. Credits to Fisher Yates algorithm 
+  	shuffle = (array) => {
+    	let i = array.length, j, temporary;
+    	while(i-- > 0) {
+      		j = Math.floor(Math.random() * (i));//decimal * array length -> rounded down to the nearest whole number
+      		temporary = array[j];
+      		array[j] = array[i];
+      		array[i] = temporary;
+    	};
+  	};
   
 
   render() {
