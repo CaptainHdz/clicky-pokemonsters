@@ -59,9 +59,9 @@ class App extends Component {
 	};
 
 	winGame = () => {
-		console.log('YOU WIN MF!');
+		console.log('YOU WIN!');
 	};
-	
+
   	//This will shuffle the cards/pokemon. Credits to Fisher Yates algorithm 
   	shuffle = (array) => {
     	let i = array.length, j, temporary;
