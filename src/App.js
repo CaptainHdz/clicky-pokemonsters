@@ -13,7 +13,8 @@ class App extends Component {
   state = {
     Pokemon,
     Score: 0,
-    topScore: 0
+	topScore: 0,
+	gameStatus: 'Click A Card To Start!'
   };
 
 
@@ -79,7 +80,9 @@ class App extends Component {
       <div>
         <Navbar
         score={this.state.Score}
-        topScore={this.state.topScore} />
+		topScore={this.state.topScore}
+		gameStatus={this.state.gameStatus}
+		/>
         <Jumbotron />
         <Wrapper>
           <Row>
