@@ -29,7 +29,6 @@ class App extends Component {
   		this.cardIsFalse();
     }
 	else if (cardStatus === "true") {
-  		alert("You already clicked that card! Take this L! Try Again!");
     	const allCardsArr = document.getElementsByClassName("pokemon");
     	for (let i = 0; i < allCardsArr.length; i++) {
     		allCardsArr[i].setAttribute("status", "false")
@@ -42,25 +41,51 @@ class App extends Component {
 //if clicked is true when the card is clicked, then reset the score, set all cards to false, and reorder them.
  //-----------------------//
     cardIsTrue = () => {
+		const status = document.getElementById('game-status');
+		status.classList.add('yellow')
+		setTimeout(() => status.classList.remove('yellow'), 500)
     	this.shuffle(Pokemon);
       	this.setState({
-        Score: 0,
+		Score: 0,
+		gameStatus: 'Bad Guess! Try Again.'
       	});
     };
 
     cardIsFalse = () => {
+		const status = document.getElementById('game-status');
+		status.classList.add('green')
+		setTimeout(() => status.classList.remove('green'), 500)
 		let newScore = this.state.Score + 1;
 		this.setState({
-			Score: newScore
+			Score: newScore,
+			gameStatus: 'Good Guess!'
 		});
 		if (newScore > this.state.topScore) { this.setState({topScore: newScore}) }
-		// this.shuffle(Pokemon);
 
 		if (newScore === 15) {this.winGame()}
+
+		this.shuffle(Pokemon);
 	};
 
 	winGame = () => {
-		console.log('YOU WIN!');
+		this.setState({
+			gameStatus: 'YOU WIN!!!'
+		});
+		const status = document.getElementById('game-status');
+		const flash = setInterval(() => {
+				status.classList.add('green');
+				setTimeout(() => status.classList.remove('green'), 500);
+			}, 1000);
+
+		const allCardsArr = document.getElementsByClassName("pokemon");
+			for (let i = 0; i < allCardsArr.length; i++) {
+				allCardsArr[i].setAttribute("status", "false")
+			};	
+			
+		setTimeout(() => {
+			this.setState({Score: 0})
+			clearInterval(flash)
+		}, 3100);
 	};
 
   	//This will shuffle the cards/pokemon. Credits to Fisher Yates algorithm 
